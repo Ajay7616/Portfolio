@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="assets/public/icon.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <div class="app">
+        <nav class="navbar" id="navbar">
+            <a href="/" class="title">
+                Portfolio
+            </a>
+            <div class="menu">
+                <img id="menuBtn" class="menuBtn" src="assets/nav/menu.png" alt="menu-button" onclick="toggleNavbar()"/>
+                <ul class="menuItems" id="menuItems">
+                    <li>
+                        <a href="#about" onclick="scrollToSection('#about')">About</a>
+                    </li>
+                    <li>
+                        <a href="#project" onclick="scrollToSection('#projects')">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#skill" onclick="scrollToSection('#skills')">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#contact" onclick="scrollToSection('#contact')">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="container" id="me">
+            <div class="content">
+                <h1 class="title">Hi I'm Ajay</h1>
+                <p class="description">
+                    I'm a Computer Science Student, driven to excel in software development. 
+                </p>
+                <a href="resume.pdf" class="contactBtn">
+                    Resume
+                </a>
+            </div>
+            <img src="assets/me/Image.png" alt="My Image" class="heroImg">
+            <div class="topBlur">
+            <div class="bottomBlur">
+        </section>
+        <section class="container" id="about">
+            <h2 class="title">About</h2>
+            <div class="content">
+              <img src="assets/about/Image.png" alt="Me with a laptop" class="aboutImage"/>
+              <ul class="aboutItems">
+                <li class="aboutItem">
+                  <img src="assets/about/cursor.png" alt="Cursor icon" />
+                  <div class="aboutItemText">
+                    <h3>Full Stack Developer</h3>
+                    <p>
+                      As a beginner, I have handful experience in developing Full Stack projects
+                    </p>
+                  </div>
+                </li>
+                <li class="aboutItem">
+                  <img src="assets/about/cursor.png" alt="Cursor icon" />
+                  <div class="aboutItemText">
+                    <h3>Machine Learning</h3>
+                    <p>
+                      I am currently developing my knowledge in Machine Learning branch also
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </section>
+        <section class="container" id="project">
+            <h2 class="title">Projects</h2>
+            <div class="projects">
+                <div class="container">
+                    <img src="assets/projects/WriterHouse.jpeg" alt="Image" class="image"/>
+                    <h3 class="title">WriterHouse</h3>
+                    <p class="description">WriterHouse is story publishing platform on the internet platform.</p>
+                    <ul class="language">
+                        <li class="skill">
+                            PHP
+                        </li>
+                        <li class="skill">
+                            Bootstrap
+                        </li>
+                    </ul>
+                    <div class="links">
+                        <a href="https://github.com/Ajay7616/Writers_House" class="link">
+                            Source
+                        </a>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="assets/projects/sign.png" alt="Image" class="image"/>
+                    <h3 class="title">Sign Language Detector</h3>
+                    <p class="description">This Sign Language Project is used to detect handsign using Machine Learning.</p>
+                    <ul class="language">
+                        <li class="skill">
+                            Python
+                        </li>
+                        <li class="skill">
+                            Numpy
+                        </li>
+                        <li class="skill">
+                            CVZone
+                        </li>
+                        <li class="skill">
+                            Keras
+                        </li>
+                    </ul>
+                    <div class="links">
+                        <a href="https://github.com/Ajay7616/Sign-Language" class="link">
+                            Source
+                        </a>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="assets/projects/todolist.png" alt="Image" class="image"/>
+                    <h3 class="title">To Do List</h3>
+                    <p class="description">To Do List is a Mern Stack Project for user to note down what task they do.</p>
+                    <ul class="language">
+                        <li class="skill">
+                            React
+                        </li>
+                        <li class="skill">
+                            Express
+                        </li>
+                        <li class="skill">
+                            Node
+                        </li>
+                        <li class="skill">
+                            MongoDB
+                        </li>
+                    </ul>
+                    <div class="links">
+                        <a href="https://github.com/Ajay7616/React/tree/main/ToDoList%20project" class="link">
+                            Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skill">
+            <h2 class="title">Skills</h2>
+                <h3 class="category">Frontend</h3>
+                <div class="content">
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/html.png" alt="title" />
+                            </div>
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/css.png" alt="title" />
+                            </div>
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/js.png" alt="title" />
+                            </div>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/bootstrap.png" alt="title" />
+                            </div>
+                            <p>Bootstrap</p>
+                        </div>
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/tailwind.png" alt="title" />
+                            </div>
+                            <p>Tailwind</p>
+                        </div>
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/react.png" alt="title" />
+                            </div>
+                            <p>React</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="category">Backend</h3>
+                <div class="content">
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/php.png" alt="title" />
+                            </div>
+                            <p>PHP</p>
+                        </div>
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/node.png" alt="title" />
+                            </div>
+                            <p>Node</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="category">Programming</h3>
+                <div class="content">
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/python.png" alt="title" />
+                            </div>
+                            <p>Python</p>
+                        </div>
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/java.png" alt="title" />
+                            </div>
+                            <p>Java</p>
+                        </div>
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/c++.png" alt="title" />
+                            </div>
+                            <p>C++</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="category">Database</h3>
+                <div class="content">
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/sql.png" alt="title" />
+                            </div>
+                            <p>SQL</p>
+                        </div>
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/mongodb.png" alt="title" />
+                            </div>
+                            <p>MongoDB</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="category">Database</h3>
+                <div class="content">
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/github.png" alt="title" />
+                            </div>
+                            <p>GitHub</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="category">Design</h3>
+                <div class="content">
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/canva.png" alt="title" />
+                            </div>
+                            <p>Canva</p>
+                        </div>
+                        <div class="skill">
+                            <div class="skillImageContainer">
+                                <img src="/assets//skill/figma.png" alt="title" />
+                            </div>
+                            <p>Figma</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer id="contact">
+            <div class="text">
+              <h2>Contact</h2>
+              <p>Feel free to reach out!</p>
+            </div>
+            <ul class="links">
+              <li class="link">
+                <img src="assets/contact/email.png" alt="Email icon" />
+                <a href="mailto:u.ajaykumar7616@gmail.com">u.ajaykumar7616@gmail.com</a>
+              </li>
+              <li class="link">
+                <img src="assets/contact/linkedin.png" alt="LinkedIn icon"/>
+                <a href="https://www.linkedin.com/in/ajay-kumar-517683274" target='_blank'>linkedin.com/AjayKumar</a>
+              </li>
+              <li class="link">
+                <img src="assets/contact/github.png" alt="Github icon" />
+                <a href="https://www.github.com/Ajay7616" target='_blank'>github.com/Ajay7616</a>
+              </li>
+            </ul>
+          </footer>
+    </div>
+    <script>
+         var menuOpen = false;
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+            updateMenu();
+        }
+
+        function updateMenu() {
+            var menuButton = document.getElementById('menuButton');
+            var menuItems = document.getElementById('menuItems');
+
+            menuItems.classList.toggle('show', menuOpen);
+        }
+    </script>
+  </body>
+</html>
