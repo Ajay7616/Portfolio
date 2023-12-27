@@ -391,7 +391,7 @@
 @media screen and (max-width: 1024px) and (min-width: 820px) {
   #project .projects .container {
     max-width: 345px; 
-    height: 80vh;
+    height: 89vh;
   }
 
   #project .projects .description {
