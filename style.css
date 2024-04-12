@@ -331,7 +331,7 @@
   box-shadow: 0 16px 14px 0 #04152d;
   padding: 18px 24px;
   max-width: 345px;
-  height: 80vh;
+  height: 87vh;
 }
 
 #project .projects .image {
@@ -350,11 +350,12 @@
   font-size: 25px;
   font-weight: 400;
   height: 25vh;
+  text-transform: capitalize;
 }
 
 #project .projects .language {
   width: 100%;
-  margin-top: 14px;
+  margin-top: 2px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: row;
@@ -369,13 +370,23 @@
   border-radius: 100px;
   background: #0b2447;
   padding: 2px 22px;
+text-transform: capitalize;
 }
 
 #project .projects .links {
   width: 100%;
-  margin-top: 26px;
+  margin-bottom: 25px;
   display: flex;
   justify-content: space-around;
+text-transform: capitalize;
+}
+
+#project .projects .writershouse {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+text-transform: capitalize;
 }
 
 #project .projects .link {
@@ -391,7 +402,7 @@
 @media screen and (max-width: 1024px) and (min-width: 820px) {
   #project .projects .container {
     max-width: 345px; 
-    height: 89vh;
+    height: 85vh;
   }
 
   #project .projects .description {
@@ -413,12 +424,18 @@
     padding: 1px 16px;
     margin-bottom: 10px; 
   }
+
+#project .projects .writershouse {
+    font-size: 24px;
+    padding: 1px 16px;
+    margin-bottom: 17px; 
+  }
 }
 
 @media screen and (max-width: 820px) {
   #project .projects .container {
     max-width: 100%; 
-    height: auto;
+    height: 87vh;
   }
 
   #project .projects .description {
