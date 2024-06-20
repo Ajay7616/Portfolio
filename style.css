@@ -224,25 +224,22 @@
   #me .heroImg {
     width: 50vh;
   }
-
-  #me .description {
-    font-size: 30px;
-  }
   
   #me .link {
-    width: 60%;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #me .link a{
+    padding: 15px 20px;
   }
 }
 
-@media screen and (max-width: 375px) {
-  #me .description {
-    font-size: 14px;
-  }
-
+@media screen and (max-width: 420px) {
   #me .link {
     display: flex;
-    flex-direction: column;
-    width: 70%;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
