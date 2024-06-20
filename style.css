@@ -131,7 +131,24 @@
   margin-bottom: 52px;
 }
 
+#me .link {
+  width: 60vh;
+  display: flex;
+  justify-content: space-between;
+}
+
 #me .contactBtn {
+  text-decoration: none;
+  background-color: #576cbc;
+  color: #fff;
+  border-radius: 100px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+#me .certificateBtn {
   text-decoration: none;
   background-color: #576cbc;
   color: #fff;
@@ -206,6 +223,10 @@
 
   #me .heroImg {
     width: 50vh;
+  }
+  
+  #me .link {
+    width: 60vh;
   }
 }
 
