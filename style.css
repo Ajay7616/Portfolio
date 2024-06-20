@@ -224,9 +224,13 @@
   #me .heroImg {
     width: 50vh;
   }
+
+  #me .description {
+    font-size: 15px;
+  }
   
   #me .link {
-    width: 60vh;
+    width: 60%;
   }
 }
 
