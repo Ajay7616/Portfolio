@@ -123,7 +123,29 @@
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  display: inline-block;
+  white-space: nowrap; /* Prevent line break */
+  overflow: hidden;
+  border-right: 4px solid #fff; /* Simulate the cursor */
+  animation: typingTitle 4s steps(30) forwards, blink 0.75s step-end infinite;
 }
+
+@keyframes typingTitle {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 
 #me .description {
   font-size: 30px;
@@ -337,164 +359,155 @@
     padding-right: 0;
   }
 }
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust spacing between project cards */
+  justify-content: center; /* Center align project cards */
+  overflow: visible; /* Ensure visibility during flip */
+}
+
 #project {
-  margin-top: 76px;
   color: #fff;
+  margin-top: 79px;
   margin-left: 10%;
   margin-right: 10%;
 }
 
 #project .title {
+  color: #fff;
   font-size: 35px;
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
+  margin-bottom: 29px;
 }
 
-#project .projects {
-  margin-top: 37px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  width: 100%;
+.project-card {
+  width: 45%; /* Adjust as needed for your layout */
+  height: 350px;
+  perspective: 1000px; /* Enables 3D perspective */
+  margin-bottom: 30px; /* Avoid overlapping */
 }
-#project .projects .container {
+
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* Enables 3D child elements */
+  transition: transform 0.6s ease-in-out; /* Smooth flip transition */
+}
+
+.flip-card:hover {
+  transform: rotateY(180deg); /* Rotate on hover */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Required for 3D transforms */
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides back/front when not visible */
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
   box-shadow: 0 16px 14px 0 #04152d;
-  padding: 18px 24px;
-  max-width: 345px;
-  height: 87vh;
 }
 
-#project .projects .image {
-  margin-bottom: 26px;
+.flip-card-front {
+  background: #576cbc;
+  z-index: 2; /* Front is initially on top */
 }
 
-#project .projects .title {
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.flip-card-back {
+  background: #132a53;
+  color: #ffffff;
+  transform: rotateY(180deg); /* Back face starts rotated */
+  z-index: 1;
+}
+
+#project .projects .project-title {
   font-size: 25px;
   font-weight: 700;
-  margin-bottom: 10px;
-  height: 45px;
+  margin-bottom: 10px; /* Spacing below title */
+  height: auto; /* Adjust for dynamic content */
+  text-align: center; /* Center-align text */
 }
 
-#project .projects .description {
-  margin-top: 6px;
-  font-size: 25px;
+#project .projects .project-description {
+  margin-top: 10px; /* Add spacing above description */
+  font-size: 20px; /* Slightly smaller font for readability */
   font-weight: 400;
-  height: 25vh;
+  height: auto; /* Allow dynamic height */
   text-transform: capitalize;
+  text-align: justify; /* Proper text alignment */
+  margin-bottom: 20px; /* Spacing below description */
 }
 
-#project .projects .language {
-  width: 100%;
-  margin-top: 2px;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 6px;
-  list-style: none;
-}
-
-#project .projects .skill {
-  font-size: 25px;
+#project .projects .project-skills {
+  font-size: 20px; /* Match font size with description */
   font-weight: 400;
   border-radius: 100px;
-  background: #0b2447;
-  padding: 2px 22px;
-text-transform: capitalize;
-}
-
-#project .projects .links {
-  width: 100%;
-  margin-bottom: 25px;
+  padding: 10px 22px; /* Increased padding for better appearance */
+  text-transform: capitalize;
+  list-style: none;
+  text-align: center; /* Center-align skills */
+  margin-bottom: 20px; /* Spacing below skills */
   display: flex;
-  justify-content: space-around;
-text-transform: capitalize;
+  flex-direction: row; /* Stack the skills vertically */
+  align-items: center; /* Center-align the list items */
+  gap: 15px; /* Add gap between each skill */
 }
 
-#project .projects .writershouse {
-  width: 100%;
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-around;
-text-transform: capitalize;
+.project-skills li {
+  margin-bottom: 10px; /* Add space between each skill */
+  padding: 10px 20px; /* Padding around each list item */
+  background-color: #3c5c7e; /* Different background for each item */
+  border-radius: 50px; /* Rounded corners for each item */
+  text-align: center;
+  width: auto;
 }
 
-#project .projects .link {
+
+#project .projects .project-link {
   text-decoration: none;
   color: #ffd;
-  font-size: 30px;
+  font-size: 20px; /* Adjust font size for link */
   font-weight: 600;
   border-radius: 100px;
   background: #576cbc;
-  padding: 1px 22px;
+  padding: 10px 22px; /* Increased padding for consistency */
+  display: inline-block; /* Ensure proper spacing */
+  text-align: center; /* Center-align link text */
+  margin: 0 auto; /* Center align the link horizontally */
 }
 
-@media screen and (max-width: 1024px) and (min-width: 820px) {
-  #project .projects .container {
-    max-width: 345px; 
-    height: 85vh;
-  }
-
-  #project .projects .description {
-    height: auto;
-  }
-
-  #project .projects .language {
-    margin-top: 10px; 
-    margin-bottom: 20px; 
-  }
-
-  #project .projects .skill {
-    font-size: 20px;
-    padding: 2px 16px; 
-  }
-
-  #project .projects .link {
-    font-size: 24px;
-    padding: 1px 16px;
-    margin-bottom: 10px; 
-  }
-
-#project .projects .writershouse {
-    font-size: 24px;
-    padding: 1px 16px;
-    margin-bottom: 17px; 
+/* Media query for responsive grid */
+@media (max-width: 1000px) {
+  .project-card {
+    width: 100%; /* Each card will take up the full width */
   }
 }
 
-@media screen and (max-width: 820px) {
-  #project .projects .container {
-    max-width: 100%; 
-    height: 64vh;
-  }
-
-  #project .projects .description {
-    height: auto;
-  }
-
-  #project .projects .language {
-    margin-top: 10px; 
-    margin-bottom: 10px; 
-  }
-
-  #project .projects .skill {
-    font-size: 20px;
-    padding: 2px 16px; 
-  }
-
-  #project .projects .link {
-    font-size: 24px;
-    padding: 1px 16px; 
-  }
-}
 
 #skill {
   color: #fff;
