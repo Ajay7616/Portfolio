@@ -154,7 +154,7 @@
 }
 
 #me .link {
-  width: 60vh;
+  width: 100vh;
   display: flex;
   justify-content: space-between;
 }
@@ -239,6 +239,10 @@
     flex-direction: column-reverse;
   }
 
+  #me .title {
+    width: 75vh;
+  }
+
   #me .content {
     align-items: center;
   }
@@ -246,9 +250,13 @@
   #me .heroImg {
     width: 50vh;
   }
+
+  #me .description {
+    width: 75vh;
+  }
   
   #me .link {
-    width: 100%;
+    width: 80%;
     justify-content: space-between;
   }
 
@@ -261,11 +269,20 @@
   #me .link {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 85vh;
   }
 
   #me .link a{
     font-size: 26px;
+  }
+
+  #me .description {
+    width: 50vh;
+    font-size: 20px;
+  }
+
+  #me .title {
+    font-size: 37px;
   }
 }
 
@@ -335,7 +352,7 @@
   font-size: 20px;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 810px) {
   #about {
     background-color: transparent;
     padding-left: 0;
@@ -370,6 +387,26 @@
 }
 
 #experience .title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+#education {
+  position: relative;
+  background-color: rgba(12, 12, 12, 0.6);
+  border-radius: 15px;
+  padding: 50px;
+  margin: 100px 10%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#education .title {
   color: #fff;
   font-size: 36px;
   font-weight: 700;
@@ -441,9 +478,75 @@
   box-shadow: 0 10px 20px rgba(165, 215, 232, 0.5);
 }
 
+#education .timeline {
+  position: relative;
+  margin: 50px 0;
+  padding-left: 30px;
+}
+
+#education .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #2babd6, #f5f5f5);
+  border-radius: 2px;
+}
+
+#education .timeline-item {
+  position: relative;
+  margin: 0 0 40px;
+  padding-left: 50px;
+}
+
+#education .timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 75px;
+  left: -28px;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #1bb1e3, #fff);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(165, 215, 232, 0.5);
+}
+
+#education .timeline-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 25px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#education .timeline-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#education .timeline-content ul {
+  list-style: disc;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#education .timeline-item:hover .timeline-content {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(165, 215, 232, 0.5);
+}
+
 @media screen and (max-width: 830px) {
   #experience {
       margin: 20px 5%;
+  }
+
+  #education {
+    margin: 20px 5%;
   }
 
   .timeline {
@@ -470,6 +573,35 @@
   }
 
   .timeline-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+
+  #education .timeline {
+    padding-left: 20px;
+  }
+
+  #education .timeline::before {
+      left: 10px;
+  }
+
+  #education .timeline-item {
+      padding-left: 40px;
+  }
+
+  #education .timeline-item::before {
+    left: -23px;
+    top: 75px;
+  }
+
+  #education .timeline-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  #education .timeline-content ul {
     list-style: disc;
     margin-left: 20px;
     font-size: 14px;
