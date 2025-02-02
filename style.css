@@ -36,7 +36,7 @@
 
 #navbar .menuItems {
   display: flex;
-  gap: 47px;
+  gap: 25px;
   list-style: none;
 }
 
@@ -252,7 +252,7 @@
   }
 
   #me .description {
-    width: 75vh;
+    width: 65vh;
   }
   
   #me .link {
@@ -269,7 +269,7 @@
   #me .link {
     display: flex;
     justify-content: space-between;
-    width: 85vh;
+    width: 50vh;
   }
 
   #me .link a{
