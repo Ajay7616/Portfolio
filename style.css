@@ -352,7 +352,7 @@
   font-size: 20px;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 830px) {
   #about {
     background-color: transparent;
     padding-left: 0;
