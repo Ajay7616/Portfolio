@@ -727,24 +727,34 @@
 }
 
 .project-skills li {
-  margin-bottom: 10px; /* Add space between each skill */
-  padding: 10px 20px; /* Padding around each list item */
-  background-color: #3c5c7e; /* Different background for each item */
-  border-radius: 50px; /* Rounded corners for each item */
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #3c5c7e;
+  border-radius: 50px;
   text-align: center;
   width: auto;
+  box-sizing: border-box; /* Include padding in width */
 }
 
 @media (max-width: 830px) {
   .project-skills {
-    display: grid; /* Apply grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Create responsive grid */
-    gap: 10px; /* Add gap between grid items */
+      position: relative;
+      display: flex; /* Enable flexbox */
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+      gap: 10px; /* Maintain spacing between items */
   }
+}
 
-  .project-skills li {
-    width: 100%; /* Ensure li items take full width in the grid */
-    padding: 10px 15px; /* Adjust padding for smaller screen */
+@media (max-width: 1300px) {
+  .project-skills {
+      position: relative;
+      display: flex; /* Enable flexbox */
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+      gap: 10px; /* Maintain spacing between items */
   }
 }
 
