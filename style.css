@@ -735,6 +735,18 @@
   width: auto;
 }
 
+@media (max-width: 830px) {
+  .project-skills {
+    display: grid; /* Apply grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Create responsive grid */
+    gap: 10px; /* Add gap between grid items */
+  }
+
+  .project-skills li {
+    width: 100%; /* Ensure li items take full width in the grid */
+    padding: 10px 15px; /* Adjust padding for smaller screen */
+  }
+}
 
 #project .projects .project-link {
   text-decoration: none;
