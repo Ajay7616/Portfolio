@@ -8,479 +8,341 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
-    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Ajay Kumar — Portfolio</title>
   </head>
   <body>
     <div class="app">
-        <nav class="navbar" id="navbar">
-            <a href="/" class="title">
-                Portfolio
+
+      <!-- ░░ NAVBAR ░░ -->
+      <nav class="navbar" id="navbar">
+        <a href="/" class="title">Portfolio</a>
+        <div class="menu">
+          <img id="menuBtn" class="menuBtn" src="assets/nav/menu.png" alt="menu-button" onclick="toggleNavbar()"/>
+          <ul class="menuItems" id="menuItems">
+            <li><a href="#about"      onclick="scrollToSection('#about')">About</a></li>
+            <li><a href="#experience" onclick="scrollToSection('#experience')">Experience</a></li>
+            <li><a href="#education"  onclick="scrollToSection('#education')">Education</a></li>
+            <li><a href="#project"    onclick="scrollToSection('#project')">Projects</a></li>
+            <li><a href="#skill"      onclick="scrollToSection('#skill')">Skills</a></li>
+            <li><a href="#contact"    onclick="scrollToSection('#contact')">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="container" id="me">
+        <div class="content">
+          <span class="hero-badge">👋 Welcome to my portfolio</span>
+
+          <h1 class="title">Hi I'm Ajay</h1>
+
+          <p class="description">
+            React.js Developer at Fable Fintech, skilled in MERN stack,
+            with experience building community-driven platforms and creating custom programming languages
+            for impactful web solutions.
+          </p>
+
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/ajay-kumar-uthaya-kumar" target="_blank" class="social-chip">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
             </a>
-            <div class="menu">
-                <img id="menuBtn" class="menuBtn" src="assets/nav/menu.png" alt="menu-button" onclick="toggleNavbar()"/>
-                <ul class="menuItems" id="menuItems">
-                    <li>
-                        <a href="#about" onclick="scrollToSection('#about')">About</a>
-                    </li>
-                    <li>
-                        <a href="#experience" onclick="scrollToSection('#experience')">Experience</a>
-                    </li>
-                    <li>
-                        <a href="#education" onclick="scrollToSection('#education')">Education</a>
-                    </li>
-                    <li>
-                        <a href="#project" onclick="scrollToSection('#projects')">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#skill" onclick="scrollToSection('#skills')">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#contact" onclick="scrollToSection('#contact')">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <section class="container" id="me">
-            <div class="content">
-                <h1 class="title">Hi I'm Ajay Kumar</h1>
-                <p class="description">
-                    React.js Developer at Fable Fintech, skilled in MERN stack, 
-                    with experience building community-driven platforms and creating custom programming languages 
-                    for impactful web solutions.
-                </p>
-		    <div class="link">
-			    <a href="resume.pdf" class="contactBtn">Resume</a>
-			    <a href="https://drive.google.com/drive/folders/1SGz7SLl0GuLuTOk2mKWJLHLJ0QQYAumy?usp=sharing" class="certificateBtn">Certificate</a>
-		    </div>
-            </div>
-            <img src="assets/me/Image.png" alt="My Image" class="heroImg">
-            <div class="topBlur">
-            <div class="bottomBlur">
-        </section>
-        <section class="container" id="about">
-            <h2 class="title">About</h2>
-            <div class="content">
-              <img src="assets/about/Image.png" alt="Me with a laptop" class="aboutImage"/>
-              <ul class="aboutItems">
-                <li class="aboutItem">
-                  <img src="assets/about/cursor.png" alt="Cursor icon" />
-                  <div class="aboutItemText">
-                    <h3>Full Stack Developer</h3>
-                    <p>
-                      I have handful experience in developing Full Stack projects
-                    </p>
-                  </div>
-                </li>
-                <li class="aboutItem">
-                  <img src="assets/about/cursor.png" alt="Cursor icon" />
-                  <div class="aboutItemText">
-                    <h3>Software Development</h3>
-                    <p>
-                     I possess knowledge in software development in Python.
-                    </p>
-                  </div>
-                </li>
+            <a href="https://www.github.com/Ajay7616" target="_blank" class="social-chip">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+
+          <div class="link">
+            <a href="resume.pdf" class="contactBtn" target="_blank">Resume</a>
+            <a href="https://drive.google.com/drive/folders/1SGz7SLl0GuLuTOk2mKWJLHLJ0QQYAumy?usp=sharing" class="certificateBtn" target="_blank">Certificates</a>
+          </div>
+        </div>
+
+        <div class="hero-img-wrapper">
+          <div class="hero-img-ring"></div>
+          <img src="assets/me/Image.png" alt="Ajay Kumar" class="heroImg">
+        </div>
+
+        <div class="topBlur"></div>
+        <div class="bottomBlur"></div>
+      </section>
+
+      <section class="container" id="about">
+        <h2 class="title">About</h2>
+        <div class="content">
+          <img src="assets/about/Image.png" alt="Me with a laptop" class="aboutImage"/>
+          <ul class="aboutItems">
+            <li class="aboutItem">
+              <img src="assets/about/cursor.png" alt="Cursor icon" />
+              <div class="aboutItemText">
+                <h3>Full Stack Developer</h3>
+                <p>I have hands-on experience building end-to-end Full Stack projects.</p>
+              </div>
+            </li>
+            <li class="aboutItem">
+              <img src="assets/about/cursor.png" alt="Cursor icon" />
+              <div class="aboutItemText">
+                <h3>Software Development</h3>
+                <p>I possess strong knowledge in software development with Python.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="container" id="experience">
+        <h2 class="title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>React.js Developer</h3>
+              <p><strong>Company:</strong> Fable Fintech</p>
+              <p><strong>Duration:</strong> April 2025 – Present</p>
+              <ul>
+                <li>Specialized in React.js development within the finance sector.</li>
+                <li>Build secure, responsive, and user-friendly financial web applications.</li>
+                <li>Deliver efficient UI/UX solutions tailored for banking and fintech platforms.</li>
               </ul>
             </div>
-        </section>
-        <section class="container" id="experience">
-            <h2 class="title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Reactjs Develeoper</h3>
-                        <p><strong>Company:</strong> Fable Fintech</p>
-                        <p><strong>Duration:</strong> April 2025 – Present</p>                        
-                        <ul>
-                            <li>Specialized in React.js development within the finance sector.</li>
-                            <li>Build secure, responsive, and user-friendly financial web applications.</li>
-                            <li>Deliver efficient UI/UX solutions tailored for banking and fintech platforms.</li>
-                        </ul>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Full Stack Web Developer Intern</h3>
+              <p><strong>Company:</strong> Mgrid Technologies</p>
+              <p><strong>Duration:</strong> July 2024 – April 2025</p>
+              <ul>
+                <li>Specializing in the MERN stack (MongoDB, Express.js, React, Node.js).</li>
+                <li>Design and develop dynamic web applications.</li>
+                <li>Optimize performance, security, and scalability.</li>
+              </ul>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Full Stack Web Developer Intern</h3>
-                        <p><strong>Company:</strong> Mgrid Technologies</p>
-                        <p><strong>Duration:</strong> July 2024 – April 2025</p>                        
-                        <ul>
-                            <li>Specializing in the MERN stack (MongoDB, Express.js, React, Node.js).</li>
-                            <li>Design and develop dynamic web applications.</li>
-                            <li>Optimize performance, security, and scalability.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container" id="education">
-            <h2 class="title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Master of Computer Science</h3>
-                        <p><strong>College:</strong> SIES College of Arts, Science and Commerce</p>
-                        <p><strong>Duration:</strong> July 2024 – Pursuing </p>                        
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Bachelor of Computer Science</h3>
-                        <p><strong>College:</strong> SIES College of Arts, Science and Commerce</p>
-                        <p><strong>Duration:</strong> July 2021 – May 2024 </p>                        
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container" id="project">
-            <h2 class="title">Projects</h2>
-            <div class="projects">
-                <!-- Project 2: WriterHouse -->
-                <div class="project-card">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="assets/projects/GrammarCheckerLibs.png" alt="Grammar Checker Libs" class="project-image">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3 class="project-title">Grammar Checker Libs</h3>
-                                <p class="project-description">Real-Time Grammar Correction for React Apps!</p>
-                                <ul class="project-skills">
-                                    <li>React.Js</li>
-                                    <li>Python</li>
-                                    <li>NPM</li>
-                                    <li>Open Source</li>
-                                </ul>
-                                <a href="https://www.npmjs.com/package/grammar-checker-libs" class="project-link">Source</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2: WriterHouse -->
-                <div class="project-card">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="assets/projects/ThalapathyVJ.jpg" alt="ThalapathyVJ" class="project-image">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3 class="project-title">ThalapathyVJ</h3>
-                                <p class="project-description">ThalapathyVJ is a fan-made programming language inspired by Tamil actor Vijay.</p>
-                                <ul class="project-skills">
-                                    <li>Python</li>
-                                </ul>
-                                <a href="https://github.com/Ajay7616/ThalapathyVJ_Programming_Language" class="project-link">Source</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Project 2: WriterHouse -->
-                <div class="project-card">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="assets/projects/WriterHouse.jpeg" alt="WriterHouse" class="project-image">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3 class="project-title">WriterHouse</h3>
-                                <p class="project-description">WriterHouse is a story publishing platform on the internet.</p>
-                                <ul class="project-skills">
-                                    <li>PHP</li>
-                                    <li>Bootstrap</li>
-                                </ul>
-                                <a href="https://github.com/Ajay7616/Writers_House" class="project-link">Source</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Project 3: InstaAmi -->
-                <div class="project-card">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="assets/projects/InstaAmi.jpg" alt="InstaAmi" class="project-image">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3 class="project-title">InstaAmi</h3>
-                                <p class="project-description">InstaAmi is a MERN Stack project for social media.</p>
-                                <ul class="project-skills">
-                                    <li>React</li>
-                                    <li>Express</li>
-                                    <li>Node</li>
-                                    <li>MongoDB</li>
-                                </ul>
-                                <a href="https://github.com/LEWISVseJal/InstaAMI_Sem6" class="project-link">Source</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Project 4: Afghan Church -->
-                <!-- <div class="project-card">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="assets/projects/afghanchurch.jpg" alt="Afghan Church" class="project-image">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3 class="project-title">Afghan Church</h3>
-                                <p class="project-description">A simple website for The Church of Saint John The Evangelist.</p>
-                                <ul class="project-skills">
-                                    <li>React</li>
-				    <li>Bootstrap</li>
-                                </ul>
-                                <a href="https://afghanchurch.in/" class="project-link">Source</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+          </div>
+        </div>
+      </section>
 
-		        <div class="project-card">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="assets/projects/wesleychurch.jpg" alt="Wesley Church(CNI)" class="project-image">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3 class="project-title">Wesley Church(CNI)</h3>
-                                <p class="project-description">A simple website for Wesley Church(CNI).</p>
-                                <ul class="project-skills">
-                                    <li>React</li>
-				    <li>Bootstrap</li>
-                                </ul>
-                                <a href="https://wesleychurchcni.com/" class="project-link">Source</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Project 5: Sign Language Detector -->
-                <!-- <div class="project-card">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="assets/projects/sign.png" alt="Sign Language Detector" class="project-image">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3 class="project-title">Sign Language Detector</h3>
-                                <p class="project-description">This project detects hand signs using Machine Learning.</p>
-                                <ul class="project-skills">
-                                    <li>Python</li>
-                                    <li>Numpy</li>
-                                    <li>CVZone</li>
-                                    <li>Keras</li>
-                                </ul>
-                                <a href="https://github.com/Ajay7616/Sign-Language" class="project-link">Source</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- <div class="project-card">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="assets/projects/camera.jpg" alt="Camera Detection" class="project-image">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3 class="project-title">Camera_detection</h3>
-                                <p class="project-description">Object detection, individual counting, and tracking in video feeds with camera integration.</p>
-                                <ul class="project-skills">
-                                    <li>Python</li>
-                                    <li>OpenCV</li>
-                                    <li>Numpy</li>
-                                    <li>SQLite</li>
-                                </ul>
-                                <a href="https://github.com/Ajay7616/Camera_detection" class="project-link">Source</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <div class="project-card">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="assets/projects/coding.jpg" alt="Coding Ground" class="project-image">
-                            </div>
-                            <div class="flip-card-back">
-                                <h3 class="project-title">Coding Ground</h3>
-                                <p class="project-description">Coding Ground, your ultimate online coding platform.</p>
-                                <ul class="project-skills">
-                                    <li>React</li>
-                                    <li>Express</li>
-                                    <li>Node</li>
-                                </ul>
-                                <a href="https://coding-ground.vercel.app/" class="project-link">Source</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
+      <section class="container" id="education">
+        <h2 class="title">Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Master of Computer Science</h3>
+              <p><strong>College:</strong> SIES College of Arts, Science and Commerce</p>
+              <p><strong>Duration:</strong> July 2024 – Pursuing</p>
             </div>
-        </section>        
-        <section id="skill">
-            <h2 class="title">Skills</h2>
-                <h3 class="category">Frontend</h3>
-                <div class="content">
-                    <div class="skills">
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/html.png" alt="title" />
-                            </div>
-                            <p>HTML</p>
-                        </div>
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/css.png" alt="title" />
-                            </div>
-                            <p>CSS</p>
-                        </div>
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/js.png" alt="title" />
-                            </div>
-                            <p>JavaScript</p>
-                        </div>
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/bootstrap.png" alt="title" />
-                            </div>
-                            <p>Bootstrap</p>
-                        </div>
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/tailwind.png" alt="title" />
-                            </div>
-                            <p>Tailwind</p>
-                        </div>
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/react.png" alt="title" />
-                            </div>
-                            <p>React</p>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="category">Backend</h3>
-                <div class="content">
-                    <div class="skills">
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/php.png" alt="title" />
-                            </div>
-                            <p>PHP</p>
-                        </div>
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/node.png" alt="title" />
-                            </div>
-                            <p>Node</p>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="category">Programming</h3>
-                <div class="content">
-                    <div class="skills">
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/python.png" alt="title" />
-                            </div>
-                            <p>Python</p>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="category">Database</h3>
-                <div class="content">
-                    <div class="skills">
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/sql.png" alt="title" />
-                            </div>
-                            <p>SQL</p>
-                        </div>
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/mongodb.png" alt="title" />
-                            </div>
-                            <p>MongoDB</p>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="category">DevOps</h3>
-                <div class="content">
-                    <div class="skills">
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/github.png" alt="title" />
-                            </div>
-                            <p>GitHub</p>
-                        </div>
-			<div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/Kubernetes.png" alt="title" />
-                            </div>
-                            <p>Kubernetes</p>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="category">Design</h3>
-                <div class="content">
-                    <div class="skills">
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/canva.png" alt="title" />
-                            </div>
-                            <p>Canva</p>
-                        </div>
-                        <div class="skill">
-                            <div class="skillImageContainer">
-                                <img src="assets/skill/figma.png" alt="title" />
-                            </div>
-                            <p>Figma</p>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <footer id="contact">
-            <div class="text">
-              <h2>Contact</h2>
-              <p>Feel free to reach out!</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Bachelor of Computer Science</h3>
+              <p><strong>College:</strong> SIES College of Arts, Science and Commerce</p>
+              <p><strong>Duration:</strong> July 2021 – May 2024</p>
             </div>
-            <ul class="links">
-              <li class="link">
-                <img src="assets/contact/email.png" alt="Email icon" />
-                <a href="mailto:u.ajaykumar7616@gmail.com">u.ajaykumar7616@gmail.com</a>
-              </li>
-              <li class="link">
-                <img src="assets/contact/linkedin.png" alt="LinkedIn icon"/>
-                <a href="https://www.linkedin.com/in/ajay-kumar-uthaya-kumar" target='_blank'>linkedin.com/AjayKumar</a>
-              </li>
-              <li class="link">
-                <img src="assets/contact/github.png" alt="Github icon" />
-                <a href="https://www.github.com/Ajay7616" target='_blank'>github.com/Ajay7616</a>
-              </li>
-            </ul>
-          </footer>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" id="project">
+        <h2 class="title">Projects</h2>
+        <div class="projects">
+
+          <div class="project-card">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="assets/projects/GrammarCheckerLibs.png" alt="Grammar Checker Libs" class="project-image">
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="project-title">Grammar Checker Libs</h3>
+                  <p class="project-description">Real-Time Grammar Correction for React Apps!</p>
+                  <ul class="project-skills">
+                    <li>React.Js</li><li>Python</li><li>NPM</li><li>Open Source</li>
+                  </ul>
+                  <a href="https://www.npmjs.com/package/grammar-checker-libs" class="project-link">Source</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="assets/projects/ThalapathyVJ.jpg" alt="ThalapathyVJ" class="project-image">
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="project-title">ThalapathyVJ</h3>
+                  <p class="project-description">ThalapathyVJ is a fan-made programming language inspired by Tamil actor Vijay.</p>
+                  <ul class="project-skills">
+                    <li>Python</li>
+                  </ul>
+                  <a href="https://github.com/Ajay7616/ThalapathyVJ_Programming_Language" class="project-link">Source</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="assets/projects/WriterHouse.jpeg" alt="WriterHouse" class="project-image">
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="project-title">WriterHouse</h3>
+                  <p class="project-description">WriterHouse is a story publishing platform on the internet.</p>
+                  <ul class="project-skills">
+                    <li>PHP</li><li>Bootstrap</li>
+                  </ul>
+                  <a href="https://github.com/Ajay7616/Writers_House" class="project-link">Source</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="assets/projects/InstaAmi.jpg" alt="InstaAmi" class="project-image">
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="project-title">InstaAmi</h3>
+                  <p class="project-description">InstaAmi is a MERN Stack project for social media.</p>
+                  <ul class="project-skills">
+                    <li>React</li><li>Express</li><li>Node</li><li>MongoDB</li>
+                  </ul>
+                  <a href="https://github.com/LEWISVseJal/InstaAMI_Sem6" class="project-link">Source</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="assets/projects/wesleychurch.jpg" alt="Wesley Church(CNI)" class="project-image">
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="project-title">Wesley Church (CNI)</h3>
+                  <p class="project-description">A simple website for Wesley Church (CNI).</p>
+                  <ul class="project-skills">
+                    <li>React</li><li>Bootstrap</li>
+                  </ul>
+                  <a href="https://wesleychurchcni.com/" class="project-link">Source</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="assets/projects/coding.jpg" alt="Coding Ground" class="project-image">
+                </div>
+                <div class="flip-card-back">
+                  <h3 class="project-title">Coding Ground</h3>
+                  <p class="project-description">Coding Ground, your ultimate online coding platform.</p>
+                  <ul class="project-skills">
+                    <li>React</li><li>Express</li><li>Node</li>
+                  </ul>
+                  <a href="https://coding-ground.vercel.app/" class="project-link">Source</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="skill">
+        <h2 class="title">Skills</h2>
+
+        <h3 class="category">Frontend</h3>
+        <div class="content">
+          <div class="skills">
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/html.png" alt="HTML"/></div><p>HTML</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/css.png" alt="CSS"/></div><p>CSS</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/js.png" alt="JavaScript"/></div><p>JavaScript</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/bootstrap.png" alt="Bootstrap"/></div><p>Bootstrap</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/tailwind.png" alt="Tailwind"/></div><p>Tailwind</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/react.png" alt="React"/></div><p>React</p></div>
+          </div>
+        </div>
+
+        <h3 class="category">Backend</h3>
+        <div class="content">
+          <div class="skills">
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/php.png" alt="PHP"/></div><p>PHP</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/node.png" alt="Node"/></div><p>Node</p></div>
+          </div>
+        </div>
+
+        <h3 class="category">Programming</h3>
+        <div class="content">
+          <div class="skills">
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/python.png" alt="Python"/></div><p>Python</p></div>
+          </div>
+        </div>
+
+        <h3 class="category">Database</h3>
+        <div class="content">
+          <div class="skills">
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/sql.png" alt="SQL"/></div><p>SQL</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/mongodb.png" alt="MongoDB"/></div><p>MongoDB</p></div>
+          </div>
+        </div>
+
+        <h3 class="category">DevOps</h3>
+        <div class="content">
+          <div class="skills">
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/github.png" alt="GitHub"/></div><p>GitHub</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/Kubernetes.png" alt="Kubernetes"/></div><p>Kubernetes</p></div>
+          </div>
+        </div>
+
+        <h3 class="category">Design</h3>
+        <div class="content">
+          <div class="skills">
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/canva.png" alt="Canva"/></div><p>Canva</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/figma.png" alt="Figma"/></div><p>Figma</p></div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact">
+        <div class="text">
+          <h2>Contact</h2>
+          <p>Feel free to reach out!</p>
+        </div>
+        <ul class="links">
+          <li class="link">
+            <img src="assets/contact/email.png" alt="Email icon" />
+            <a href="mailto:u.ajaykumar7616@gmail.com">u.ajaykumar7616@gmail.com</a>
+          </li>
+          <li class="link">
+            <img src="assets/contact/linkedin.png" alt="LinkedIn icon"/>
+            <a href="https://www.linkedin.com/in/ajay-kumar-uthaya-kumar" target="_blank">linkedin.com/AjayKumar</a>
+          </li>
+          <li class="link">
+            <img src="assets/contact/github.png" alt="Github icon" />
+            <a href="https://www.github.com/Ajay7616" target="_blank">github.com/Ajay7616</a>
+          </li>
+        </ul>
+      </footer>
+
     </div>
+
     <script>
-         var menuOpen = false;
-        function toggleMenu() {
-            menuOpen = !menuOpen;
-            updateMenu();
-        }
-
-        function updateMenu() {
-            var menuButton = document.getElementById('menuButton');
-            var menuItems = document.getElementById('menuItems');
-
-            menuItems.classList.toggle('show', menuOpen);
-        }
+      var menuOpen = false;
+      function toggleMenu() {
+        menuOpen = !menuOpen;
+        var menuItems = document.getElementById('menuItems');
+        menuItems.classList.toggle('show', menuOpen);
+      }
     </script>
   </body>
 </html>
