@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,19 +13,21 @@
   </head>
   <body>
     <div class="app">
-
-      <!-- ░░ NAVBAR ░░ -->
       <nav class="navbar" id="navbar">
         <a href="/" class="title">Portfolio</a>
+        <button type="button" class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menuItems" onclick="toggleNavbar(event)">
+          <span class="menuBtn-bar" aria-hidden="true"></span>
+          <span class="menuBtn-bar" aria-hidden="true"></span>
+          <span class="menuBtn-bar" aria-hidden="true"></span>
+        </button>
         <div class="menu">
-          <img id="menuBtn" class="menuBtn" src="assets/nav/menu.png" alt="menu-button" onclick="toggleNavbar()"/>
           <ul class="menuItems" id="menuItems">
-            <li><a href="#about"      onclick="scrollToSection('#about')">About</a></li>
-            <li><a href="#experience" onclick="scrollToSection('#experience')">Experience</a></li>
-            <li><a href="#education"  onclick="scrollToSection('#education')">Education</a></li>
-            <li><a href="#project"    onclick="scrollToSection('#project')">Projects</a></li>
-            <li><a href="#skill"      onclick="scrollToSection('#skill')">Skills</a></li>
-            <li><a href="#contact"    onclick="scrollToSection('#contact')">Contact</a></li>
+            <li><a href="#about"      onclick="scrollToSection('#about', event)">About</a></li>
+            <li><a href="#experience" onclick="scrollToSection('#experience', event)">Experience</a></li>
+            <li><a href="#education"  onclick="scrollToSection('#education', event)">Education</a></li>
+            <li><a href="#project"    onclick="scrollToSection('#project', event)">Projects</a></li>
+            <li><a href="#skill"      onclick="scrollToSection('#skill', event)">Skills</a></li>
+            <li><a href="#contact"    onclick="scrollToSection('#contact', event)">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -264,20 +266,21 @@
         <h3 class="category">Frontend</h3>
         <div class="content">
           <div class="skills">
-            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/html.png" alt="HTML"/></div><p>HTML</p></div>
-            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/css.png" alt="CSS"/></div><p>CSS</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/react.png" alt="React"/></div><p>React.Js</p></div>
             <div class="skill"><div class="skillImageContainer"><img src="assets/skill/js.png" alt="JavaScript"/></div><p>JavaScript</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/tailwind.png" alt="Tailwind"/></div><p>Tailwind CSS</p></div>
             <div class="skill"><div class="skillImageContainer"><img src="assets/skill/bootstrap.png" alt="Bootstrap"/></div><p>Bootstrap</p></div>
-            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/tailwind.png" alt="Tailwind"/></div><p>Tailwind</p></div>
-            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/react.png" alt="React"/></div><p>React</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/html.png" alt="HTML"/></div><p>HTML5</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/css.png" alt="CSS"/></div><p>CSS3</p></div>
           </div>
         </div>
 
         <h3 class="category">Backend</h3>
         <div class="content">
           <div class="skills">
-            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/php.png" alt="PHP"/></div><p>PHP</p></div>
             <div class="skill"><div class="skillImageContainer"><img src="assets/skill/node.png" alt="Node"/></div><p>Node</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/express.jpg" alt="Exoress.js"/></div><p>Express.Js</p></div>
+             <div class="skill"><div class="skillImageContainer"><img src="assets/skill/php.png" alt="PHP"/></div><p>PHP</p></div>
           </div>
         </div>
 
@@ -296,53 +299,78 @@
           </div>
         </div>
 
-        <h3 class="category">DevOps</h3>
+        <h3 class="category">AI Tools</h3>
         <div class="content">
           <div class="skills">
-            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/github.png" alt="GitHub"/></div><p>GitHub</p></div>
-            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/Kubernetes.png" alt="Kubernetes"/></div><p>Kubernetes</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/claude.png" alt="Claude"/></div><p>Claude</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/cursor.png" alt="Figma"/></div><p>Cursor</p></div>
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/copilot.png" alt="Github Copilot"/></div><p>Github Copilot</p></div>
           </div>
         </div>
 
-        <h3 class="category">Design</h3>
+        <h3 class="category">DevOps & Other Tools</h3>
         <div class="content">
           <div class="skills">
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/github.png" alt="GitHub"/></div><p>GitHub</p></div>
+            <!-- <div class="skill"><div class="skillImageContainer"><img src="assets/skill/Kubernetes.png" alt="Kubernetes"/></div><p>Kubernetes</p></div> -->
+            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/postman.webp" alt="Postman"/></div><p>Postman</p></div>
             <div class="skill"><div class="skillImageContainer"><img src="assets/skill/canva.png" alt="Canva"/></div><p>Canva</p></div>
-            <div class="skill"><div class="skillImageContainer"><img src="assets/skill/figma.png" alt="Figma"/></div><p>Figma</p></div>
           </div>
         </div>
       </section>
 
       <footer id="contact">
-        <div class="text">
-          <h2>Contact</h2>
-          <p>Feel free to reach out!</p>
+        <div class="contact-shell">
+          <div class="contact-left">
+            <h2>Let’s build something</h2>
+            <p>
+              Have an idea, role, or project? Send a quick message — I usually reply within 24 hours.
+            </p>
+
+            <div class="contact-cta">
+              <a class="contact-primary" href="mailto:u.ajaykumar7616@gmail.com">Email me</a>
+              <a class="contact-secondary" href="resume.pdf" target="_blank">View resume</a>
+            </div>
+          </div>
+
+          <div class="contact-right" aria-label="Contact links">
+            <a class="contact-card" href="mailto:u.ajaykumar7616@gmail.com">
+              <div class="contact-card-icon">
+                <img src="assets/contact/email.png" alt="" />
+              </div>
+              <div class="contact-card-text">
+                <div class="contact-card-title">Email</div>
+                <div class="contact-card-subtitle">u.ajaykumar7616@gmail.com</div>
+              </div>
+            </a>
+
+            <a class="contact-card" href="https://www.linkedin.com/in/ajay-kumar-uthaya-kumar" target="_blank" rel="noreferrer">
+              <div class="contact-card-icon">
+                <img src="assets/contact/linkedin.png" alt="" />
+              </div>
+              <div class="contact-card-text">
+                <div class="contact-card-title">LinkedIn</div>
+                <div class="contact-card-subtitle">Connect &amp; message</div>
+              </div>
+            </a>
+
+            <a class="contact-card" href="https://www.github.com/Ajay7616" target="_blank" rel="noreferrer">
+              <div class="contact-card-icon">
+                <img src="assets/contact/github.png" alt="" />
+              </div>
+              <div class="contact-card-text">
+                <div class="contact-card-title">GitHub</div>
+                <div class="contact-card-subtitle">View projects &amp; code</div>
+              </div>
+            </a>
+
+            <div class="contact-footer-note">
+              © <span id="contactYear"></span> Ajay Kumar
+            </div>
+          </div>
         </div>
-        <ul class="links">
-          <li class="link">
-            <img src="assets/contact/email.png" alt="Email icon" />
-            <a href="mailto:u.ajaykumar7616@gmail.com">u.ajaykumar7616@gmail.com</a>
-          </li>
-          <li class="link">
-            <img src="assets/contact/linkedin.png" alt="LinkedIn icon"/>
-            <a href="https://www.linkedin.com/in/ajay-kumar-uthaya-kumar" target="_blank">linkedin.com/AjayKumar</a>
-          </li>
-          <li class="link">
-            <img src="assets/contact/github.png" alt="Github icon" />
-            <a href="https://www.github.com/Ajay7616" target="_blank">github.com/Ajay7616</a>
-          </li>
-        </ul>
       </footer>
 
     </div>
-
-    <script>
-      var menuOpen = false;
-      function toggleMenu() {
-        menuOpen = !menuOpen;
-        var menuItems = document.getElementById('menuItems');
-        menuItems.classList.toggle('show', menuOpen);
-      }
-    </script>
   </body>
 </html>

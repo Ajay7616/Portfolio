@@ -1,13 +1,45 @@
-function scrollToSection(sectionId) {
-  var section = document.querySelector(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+function scrollToSection(sectionId, evt) {
+  if (evt && evt.preventDefault) evt.preventDefault();
+
+  var isMobile = window.innerWidth <= 830;
+  var menuItems = document.getElementById('menuItems');
+  var menuBtn = document.getElementById('menuBtn');
+  if (isMobile && menuItems) {
+    menuItems.classList.remove('show');
+    if (menuBtn) {
+      menuBtn.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-label', 'Open menu');
+    }
   }
+
+  var section = document.querySelector(sectionId);
+  if (!section) return;
+
+  if (isMobile) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+
+  var navbar = document.getElementById('navbar');
+  var gap = 16;
+  var offset = navbar ? navbar.getBoundingClientRect().height + gap : 96;
+  var top = section.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
 }
 
-function toggleNavbar() {
-  var navbarLinks = document.querySelector('.menuItems');
-  navbarLinks.style.display = (navbarLinks.style.display === 'block') ? 'none' : 'block';
+function toggleNavbar(evt) {
+  if (evt && evt.preventDefault) evt.preventDefault();
+  var menuItems = document.getElementById('menuItems');
+  var menuBtn = document.getElementById('menuBtn');
+  if (!menuItems) return;
+  menuItems.classList.toggle('show');
+  var open = menuItems.classList.contains('show');
+  if (menuBtn) {
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menuBtn.classList.toggle('open', open);
+  }
 }
 
 window.addEventListener('scroll', function () {
@@ -78,6 +110,9 @@ window.addEventListener('scroll', function () {
   document.head.appendChild(style);
 
   document.addEventListener('DOMContentLoaded', function () {
+    var y = document.getElementById('contactYear');
+    if (y) y.textContent = String(new Date().getFullYear());
+
     var targets = document.querySelectorAll('#about, #experience, #education, #project, #skill, #contact');
     targets.forEach(function (el) { el.classList.add('fade-section'); });
 
