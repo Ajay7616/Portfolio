@@ -175,6 +175,7 @@ html::-webkit-scrollbar {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    padding: 14px 10% 0px;
   }
 
   #navbar .menuBtn {
@@ -288,12 +289,25 @@ html::-webkit-scrollbar {
 
 @keyframes typingTitle {
     from { width: 0; }
-    to { width: 100%; }
+    to { width: 79%; }
 }
 
 @keyframes blink {
     50% { border-color: transparent; }
 }
+
+
+@media screen and (max-width: 830px) {
+  @keyframes typingTitle {
+    from { width: 0; }
+    to { width: 63%; }
+  }
+
+  @keyframes blink {
+      50% { border-color: transparent; }
+  }
+}
+
 
 #me .description {
   font-size: 18px;
